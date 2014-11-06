@@ -59,6 +59,7 @@ describe("The 'toEqual' matcher", function () {
             b: 34
         };
 
+        
         expect(foo).toEqual(bar);
         expect(foo).not.toBe(bar);
     });
