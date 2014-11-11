@@ -13,6 +13,7 @@ describe("prototype suite", function () {
     });
 
     afterEach(function () {
+
         civic = null;
         mondeo = null;
         console.info("-----------------------------END-------------------------------");
@@ -23,9 +24,10 @@ describe("prototype suite", function () {
         expect(civic.model).toEqual("Honda Civic");
         expect(civic.year).toEqual(2009);
         expect(civic.miles).toEqual(20000);
+        
         expect(civic['miles']).toBe(20000);
 
-        expect(temp).toEqual(mondeo);
+        expect(temp['model']).toEqual(mondeo['model']);
         console.info(civic.toString());
     });
 
@@ -59,7 +61,7 @@ describe("The 'toEqual' matcher", function () {
             b: 34
         };
 
-        
+
         expect(foo).toEqual(bar);
         expect(foo).not.toBe(bar);
     });
